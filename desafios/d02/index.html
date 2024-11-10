@@ -19,10 +19,16 @@
 </head>
 <body>
     <h1>Boas-Vindas</h1>
-    <button data-bt="des" type="submit">Inicie o Desafio</button>
+    <button id="des" type="submit">Inicie o Desafio</button>
 
     <script>
-        
+        const button = document.getElementById('des')
+        button.addEventListener('click', () => {
+            var name = prompt('Qual é o seu nome?')
+            var age = prompt(`Olá ${name}! Quantos anos você tem?`)
+            alert(`É um prazer conhece-lo ${name}, que tem ${age} anos de idade`)
+        })
+
     </script>
 </body>
 </html>
