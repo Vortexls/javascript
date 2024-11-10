@@ -22,12 +22,20 @@
 </head>
 <body>
     <h1>Desafio das Mensagens</h1>
-    <button type="submit">Botão 1</button>
-    <button type="submit">Botão 2</button>
-    <button type="submit">Botão 3</button>
+    <button id="bt1" type="submit" onclick="msg1()">Botão 1</button>
+    <button id="bt2" type="submit" onclick="msg2()">Botão 2</button>
+    <button id="bt3" type="submit" onclick="msg3()">Botão 3</button>
 
     <script>
-        
+        function msg1(){
+            window.alert('Você pressionou o 1° botão')
+        }
+        function msg2(){
+            window.alert('Você pressionou o 2° botão')
+        }
+        function msg3(){
+            window.alert('Você pressionou o 3° botão')
+        }
     </script>
 </body>
 </html>
