@@ -22,7 +22,17 @@
     <button id="calc" type="submit">Calcular troco</button>
 
     <script>
-
+        const button = document.getElementById('calc')
+        button.addEventListener('click', () =>{
+            const prod = prompt('Qual produto você comprou?')
+            const val = parseFloat(prompt(`Quanto custa o(a) ${prod} que você comprou?`))
+            const valpag = parseFloat(prompt(`Qual foi o valor dado para pagar pagar o(a) ${prod}`))
+            const troco = valpag - val
+            const valdec = val.toFixed(2)
+            const valpagdec = valpag.toFixed(2)
+            const trocodec = troco.toFixed(2)
+            alert(`Você comprou ${prod} por R$${valdec}.\n` + `Você deu R$${valpagdec} em dinheiro e vai receber R$${trocodec} de troco.\n` + `Volte Sempre!`)
+        })
     </script>
 </body>
 </html>
