@@ -7,7 +7,7 @@
     <style>
         button{
             width: auto;
-            padding: 20px;
+            padding: auto;
             font-size: 1.2em;
             cursor: pointer;
         }
@@ -27,6 +27,31 @@
 
     <script>
         
+        const button = document.getElementById('calc')
+        var dist = parseInt(document.getElementById('dist'))
+        button.addEventListener('click', () =>{
+            document.write(`A distância de ${dist} metros corresponde a:`)
+            const km = dist / 1000
+            const hm = dist / 100
+            const dam = dist / 10
+            const dm = dist * 10
+            const cm = dist * 100
+            const mm = dist * 1000
+            
+            const kmdec = dist.toFixed(3)
+            const hmdec = dist.toFixed(3)
+            const damdec = dist.toFixed(3)
+            const dmdec = dist.toFixed(1)
+            const cmdec = dist.toFixed(0)
+            const mmdec = dist.toFixed(0)
+
+            document.write(`${kmdec} quilômetros (Km)`)
+            document.write(`${hmdec} hectômetros (Hm)`)
+            document.write(`${damdec} decâmetros (Dam)`)
+            document.write(`${dmdec} decímetros (Dm)`)
+            document.write(`${cmdec} centímetros (Cm)`)
+            document.write(`${mmdec} milímetros (Mm)`)
+        })
     </script>
 </body>
 </html>
