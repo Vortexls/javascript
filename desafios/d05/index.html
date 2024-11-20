@@ -19,17 +19,19 @@
 </head>
 <body>
     <h1>Conversão de Medidas</h1>
-    <form action="#" method="post">
+    <form action="" method="post">
         <label for="dist">Digite uma distância em metros (m)</label>
         <input type="number" name="dist" id="dist">
-        <button id="calc" type="submit">Converter</button>
+        <button id="calc" type="button">Converter</button>
     </form>
-    <div id="transf"></div>
-
+    <div id="res">
+        Informe os dados acima para obter o resultado!
+    </div>
+    
     <script>
-        
+
         const button = document.getElementById('calc')
-        const trans = document.getElementById('transf')
+        const res = document.getElementById('res')
 
         button.addEventListener('click', () =>{
             const dist = parseFloat(document.getElementById('dist').value)
@@ -41,13 +43,13 @@
             const cm = (dist * 100).toFixed(0)
             const mm = (dist * 1000).toFixed(0)
 
-            document.transf.innerHTML = document.write(
-                `${km} quilômetros (Km)<br>` + 
-                `${hm} hectômetros (Hm)<br>` + 
-                `${dam} decâmetros (Dam)<br>` + 
-                `${dm} decímetros (Dm)<br>` + 
-                `${cm} centímetros (Cm)<br>` + 
-                `${mm} milímetros (Mm)<br>`)
+            res.innerHTML = `
+                ${km} quilômetros (Km)<br> 
+                ${hm} hectômetros (Hm)<br> 
+                ${dam} decâmetros (Dam)<br> 
+                ${dm} decímetros (Dm)<br> 
+                ${cm} centímetros (Cm)<br> 
+                ${mm} milímetros (Mm)<br>`
         })
     </script>
 </body>
