@@ -17,13 +17,12 @@
     <div id="res">Informe os valores acima para continuar.</div>
 
     <script>
-        var dollar = parseFloat(document.getElementById('valor'))
-        var reais = parseFloat(document.getElementById('poupança'))
-        const res = document.getElementById('calc')
-        
         function converter(){
-            const valor = (reais/dollar).value
-            res.innerHTML = (`O valor de R$${reais.toFixed(2)} é igual a ${valor.toFixed(2)}`)
+            const dollar = parseFloat(document.getElementById('valor').value)
+            const reais = parseFloat(document.getElementById('poupança').value)
+            const res = document.getElementById('res')
+            const valor = (reais/dollar)
+            res.innerHTML = (`O valor de R$${reais.toFixed(2)} é igual a $${valor.toFixed(2)}`)
         }
     </script>
 </body>
